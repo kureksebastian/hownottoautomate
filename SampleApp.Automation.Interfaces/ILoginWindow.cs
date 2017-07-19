@@ -14,7 +14,11 @@ namespace SampleApp.Automation.Interfaces
         Button LoginButton { get; set; }
         Button AdminLoginButton { get; set; }
 
+        //void ClickButton(string buttonName);
+        //void SetText(string text, string textBoxName);
+        //string GetText(string textBoxName);
+        
 
-        bool Login(string login, string password, bool isAdmin);
+        bool Login(string login, string password);
     }
 }

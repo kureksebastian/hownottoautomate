@@ -10,14 +10,26 @@ namespace SampleApp.Automation.POM
 {
     public class LoginWindow : ILoginWindow
     {
+        //Get Controls using framework (i.e. White, Selenium etc)
         public TextBox LoginTextBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public TextBox PasswordTextBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public Button LoginButton { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public Button AdminLoginButton { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public bool Login(string login, string password, bool isAdmin)
+        public bool Login(string login, string password)
         {
-            throw new NotImplementedException();
+            LoginTextBox.Text = login;
+            PasswordTextBox.Text = password;
+            if (login.ToLower().Equals("admin"))
+            {
+                AdminLoginButton.Click();
+            }
+            else
+            {
+                LoginButton.Click();
+            }
+            //Rest of the logic goes here
+            return true;
         }
     }
 }

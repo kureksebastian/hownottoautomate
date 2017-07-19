@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ILoginWindow.cs" />
     <Compile Include="IApp.cs" />
+    <Compile Include="IWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
